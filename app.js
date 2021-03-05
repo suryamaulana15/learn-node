@@ -22,15 +22,14 @@ const server = http.createServer((req, res) => {
     return req.on('end', () => {
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split('=')[1];
-      fs.writeFileSync('message.txt', message);
-      res.statusCode = 302;
-      res.setHeader('Location', '/');
-      return res.end();
+      fs.writeFile('message.txt', message, (err) => {
+        res.statusCode = 302;
+        res.setHeader('Location', '/');
+        return res.end();
+      });
     });
      /*
-     * di eksekusi setelah tidak ada perubahan,
-     * menyebabkan insialisasi (res.(namaVariabel)) tidak dapat di jalankan
-     * harus menggunakan return agar end bisa menjalankan res()
+     * mengganti  writeFileSyinc agar program bisa menggunakan asyinc sehingga tidak memblok alur program pada beberapa waktu
      * */
   }
   res.setHeader('Content-Type', 'text/html');
