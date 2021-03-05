@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
      /*
      * di eksekusi setelah tidak ada perubahan,
      * menyebabkan insialisasi (res.(namaVariabel)) tidak dapat di jalankan
-     * harus menggunakan return agar end langsung dijalankan tetapi akan memblok fungsi yg seharusnya dijalankan
+     * harus menggunakan return agar end bisa menjalankan res()
      * */
   }
   res.setHeader('Content-Type', 'text/html');
