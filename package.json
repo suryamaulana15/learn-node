@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-complete",
+  "version": "1.0.0",
+  "description": "learn node js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suryamaulana15/learn-node.git"
+  },
+  "author": "surya maulana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suryamaulana15/learn-node/issues"
+  },
+  "homepage": "https://github.com/suryamaulana15/learn-node#readme"
+}
